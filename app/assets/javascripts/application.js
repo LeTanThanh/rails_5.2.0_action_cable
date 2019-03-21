@@ -15,3 +15,17 @@
 //= require turbolinks
 //= require jquery
 //= require_tree .
+
+(function() {
+  App.cable.subscriptions.create("WebNotificationsChannel", {
+    connected: function() {
+
+    },
+    disconnected: function() {
+
+    },
+    received: function(data) {
+      $("#message").append(data["message"]);
+    }
+  });
+}).call(this);
