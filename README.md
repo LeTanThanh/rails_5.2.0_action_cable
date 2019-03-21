@@ -1,24 +1,18 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Configuration:
 
-Things you may want to cover:
+* Ruby version: 2.5.0
 
-* Ruby version
+* Rails version: 5.2.0
 
-* System dependencies
+* Bundler version: 1.17.3
 
-* Configuration
+* Redis
 
-* Database creation
+Run below commands for testing:
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```ruby
+rails console
+ActionCable.server.broadcast "web_notifications_channel", message: "<h1>Hello</h1>"
+```
